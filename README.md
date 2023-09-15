@@ -19,7 +19,7 @@ Run `npm run start`
 - Micro-Frontend with state management
 - StoryBlok
 
-## TODOs
+## TODO
 - [ ] Presentation script
 - [ ] Code demo flow
 - [ ] StoryBlok
