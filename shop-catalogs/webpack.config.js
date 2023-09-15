@@ -39,7 +39,8 @@ module.exports = {
             remotes: {
             },
             exposes: {
-                "./mount": "./src/component.js",
+                "./mount": "./src/shop-catalog.js",
+                "./store": "./src/store.js",
             },
         }),
     ],
