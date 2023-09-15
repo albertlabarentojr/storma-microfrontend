@@ -1,0 +1,19 @@
+{
+  "name": "storma-microfrontend",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "shop",
+      "shop-catalogs"
+    ]
+  },
+  "scripts": {
+    "start": "lerna run --parallel start",
+    "build": "lerna run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lerna": "^7.3.0"
+  }
+}
