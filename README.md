@@ -22,7 +22,7 @@ Run `npm run start`
 ## TODO
 - [ ] Presentation script
 - [ ] App layout
-- [ ] Repo per each microfrontend
+- [ ] Repo per microfrontend
 - [ ] Code demo flow
 - [ ] StoryBlok
 - [ ] State management
