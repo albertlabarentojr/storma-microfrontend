@@ -13,13 +13,14 @@ Run `npm run start`
 - Degit https://www.npmjs.com/package/degit
 
 ## Presentation
-
-### TODOs
-- [ ] __Write script on each sections__
-
-
 - Intro Micro-Frontend
 - Use Cases 
 - Demo Micro-Frontend
 - Micro-Frontend with state management
 - StoryBlok
+
+## TODOs
+- [ ] Presentation script
+- [ ] Code demo flow
+- [ ] StoryBlok
+- [ ] State management
