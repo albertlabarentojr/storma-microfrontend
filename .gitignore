@@ -1,2 +1,4 @@
 node_modules/
 .idea/
+localhost.pem
+localhost-key.pem
