@@ -9,7 +9,7 @@ module.exports = {
     },
 
     devServer: {
-        port: 8082,
+        port: 8083,
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
@@ -34,7 +34,7 @@ module.exports = {
     plugins: [
         new VueLoaderPlugin(),
         new ModuleFederationPlugin({
-            name: "shopCatalog",
+            name: "shopHeader",
             filename: "entry.js",
             remotes: {
             },

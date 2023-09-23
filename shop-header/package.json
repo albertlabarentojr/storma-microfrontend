@@ -1,5 +1,5 @@
 {
-  "name": "shop-catalogs",
+  "name": "shop-header",
   "version": "1.0.0",
   "description": "Shop Catalogs",
   "scripts": {
@@ -25,6 +25,7 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@storyblok/vue": "^7.2.0",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29",
     "postcss-loader": "^7.3.3",

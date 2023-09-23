@@ -4,7 +4,8 @@
   "workspaces": {
     "packages": [
       "shop",
-      "shop-catalogs"
+      "shop-catalogs",
+      "shop-header"
     ]
   },
   "scripts": {
