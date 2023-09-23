@@ -43,5 +43,8 @@ module.exports = {
                 "./store": "./src/store.js",
             },
         }),
+        new HtmlWebPackPlugin({
+            template: "./src/index.html",
+        }),
     ],
 };
