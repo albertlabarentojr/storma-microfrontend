@@ -21,4 +21,4 @@ app.component("Teaser", Teaser);
 app.component("Feature", Feature);
 
 
-app.mount('#app')
+app.mount('#shop-header')

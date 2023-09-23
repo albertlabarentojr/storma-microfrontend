@@ -2,6 +2,7 @@ import mountCatalog from "shopCatalog/mount";
 import "shopHeader/mount";
 import { subscribe } from "shopCatalog/store";
 import './add-catalog';
+import "./index.scss";
 
 mountCatalog("#shop-catalogs");
 
