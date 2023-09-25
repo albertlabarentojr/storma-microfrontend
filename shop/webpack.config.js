@@ -44,7 +44,7 @@ module.exports = {
             filename: "entry.js",
             remotes: {
                 shopCatalog: "shopCatalog@http://localhost:8082/entry.js",
-                shopHeader: "shopHeader@http://localhost:8083/entry.js",
+                shopAds: "shopAds@http://localhost:8083/entry.js",
             },
             exposes: {},
         }),

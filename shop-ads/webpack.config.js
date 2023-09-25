@@ -34,7 +34,7 @@ module.exports = {
     plugins: [
         new VueLoaderPlugin(),
         new ModuleFederationPlugin({
-            name: "shopHeader",
+            name: "shopAds",
             filename: "entry.js",
             remotes: {
             },

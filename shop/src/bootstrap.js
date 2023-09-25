@@ -1,5 +1,5 @@
 import mountCatalog from "shopCatalog/mount";
-import "shopHeader/mount";
+import "shopAds/mount";
 import { subscribe } from "shopCatalog/store";
 import './add-catalog';
 import "./index.scss";
