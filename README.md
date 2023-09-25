@@ -21,8 +21,10 @@ Run `npm run start`
 
 ## TODO
 - [ ] Presentation script
-- [ ] App layout
+- [x] App layout
 - [ ] Repo per microfrontend
 - [ ] Code demo flow
-- [ ] StoryBlok
-- [ ] State management
+- [x] StoryBlok
+- [x] State management
+- [ ] Shop Store (Vue)
+- [ ] Shop Cart (React)

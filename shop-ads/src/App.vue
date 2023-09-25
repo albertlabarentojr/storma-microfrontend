@@ -5,7 +5,9 @@ import ShopHeader from './components/ShopHeader.vue'
 <template>
   <Suspense>
     <template #default>
-      <ShopHeader />
+      <div>
+        <ShopHeader />
+      </div>
     </template>
 
     <template #fallback>
