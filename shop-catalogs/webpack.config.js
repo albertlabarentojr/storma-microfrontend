@@ -1,9 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const { VueLoaderPlugin } = require("vue-loader");
+const path = require("path");
 
 module.exports = {
     mode: "development",
+
     resolve: {
         extensions: [".tsx", ".ts", ".vue", ".jsx", ".js", ".json"],
     },
@@ -42,6 +44,9 @@ module.exports = {
                 "./mount": "./src/index.js",
                 "./store": "./src/store.js",
             },
+        }),
+        new HtmlWebPackPlugin({
+            template: "./src/index.html",
         }),
     ],
 };

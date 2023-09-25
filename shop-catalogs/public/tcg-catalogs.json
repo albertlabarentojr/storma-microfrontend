@@ -1,0 +1,38 @@
+[
+    {
+        "product:name": "Monkey D. Luffy (OP05-119)",
+        "description": "Foil (Super Parallel)",
+        "image": "http://localhost:8082/images/luffy.jpeg",
+        "price": "1000"
+    },
+    {
+        "product:name": "Law Trafalgar (OP05-069)",
+        "description": "Foil (Super Parallel)",
+        "image": "http://localhost:8082/images/trafalgar.jpeg",
+        "price": "700"
+    },
+    {
+        "product:name": "Eustass Kid (OP05-074)",
+        "description": "Foil (Super Parallel)",
+        "image": "http://localhost:8082/images/kid.jpeg",
+        "price": "900"
+    },
+    {
+        "product:name": "Uta (OP02-120)",
+        "description": "Foil (SP Ver.)",
+        "image": "http://localhost:8082/images/uta.jpeg",
+        "price": "300"
+    },
+    {
+        "product:name": "Kaidou (OP05-118)",
+        "description": "Foil (Parallel)",
+        "image": "http://localhost:8082/images/kaidou.jpeg",
+        "price": "600"
+    },
+    {
+        "product:name": "Mansherry (OP05-088 R)",
+        "description": "Foil",
+        "image": "http://localhost:8082/images/mansherry.jpeg",
+        "price": "700"
+    }
+]
