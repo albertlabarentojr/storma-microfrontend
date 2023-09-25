@@ -3,7 +3,7 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <div v-editable="blok" class="py-2">
-    <h1 class="text-lg">{{ blok.name }}</h1>
+  <div v-editable="blok" class="border-slate-200 mb-3">
+    <img v-for="feature in blok.name" :src="feature.filename" width="200" class="mb-3">
   </div>
 </template>
