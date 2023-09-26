@@ -1,9 +1,19 @@
-import React from 'react'; // Must be imported for webpack to work
-import useStore from './store';
+import React, {useState, useEffect} from 'react'; // Must be imported for webpack to work
 import Cart from './Cart'
+import {subscribe, removeToCart} from './store';
 
 function App() {
-    const store = useStore();
+    const [cart, setCart] = useState([]);
+
+    useEffect(() => {
+        const unsubscribe = subscribe((newState) => {
+            setCart([...newState.cart]);
+        });
+
+        return () => {
+            unsubscribe();
+        };
+    }, []);
 
     return (
         <>
@@ -11,15 +21,15 @@ function App() {
                 <h1 className="text-2xl text-center">Cart Summary</h1>
             </header>
 
-            { store.cart.length === 0 && (
+            { cart.length === 0 && (
                 <h2>Your cart is empty!</h2>
             ) }
 
-            { store.cart.map(item => (
-                <Cart cart={item}></Cart>
+            { cart.map(item => (
+                <Cart cart={item} key={item.sku} removeToCart={() => removeToCart(item)}></Cart>
             ))}
 
-            {store.cart.length > 0 && (
+            {cart.length > 0 && (
                 <>
                     <div className="flex justify-between mb-2">
                         <span>Total:</span>

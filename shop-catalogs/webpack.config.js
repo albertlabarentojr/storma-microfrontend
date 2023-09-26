@@ -38,6 +38,7 @@ module.exports = {
             name: "shopCatalog",
             filename: "entry.js",
             remotes: {
+                shopCart: "shopCart@http://localhost:8084/entry.js"
             },
             exposes: {
                 "./mount": "./src/index.js",

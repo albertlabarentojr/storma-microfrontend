@@ -1,12 +1,12 @@
 {
-  "name": "storma-microfrontend",
+  "name": "shop",
   "version": "1.0.0",
   "description": "Storma Lunch and Learn: Micro-Frontend + StoryBlok",
   "scripts": {
-    "build": "../shop/node_modules/.bin/webpack --mode production",
-    "build:dev": "../shop/node_modules/.bin/webpack --mode development",
-    "start": "../shop/node_modules/.bin/webpack-dev-server --open --mode development",
-    "start:live": "../shop/node_modules/.bin/webpack-dev-server --open --mode development --live-reload"
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "start": "webpack-dev-server --open --mode development",
+    "start:live": "webpack-dev-server --open --mode development --live-reload"
   },
   "author": "Storma Team",
   "license": "ISC",

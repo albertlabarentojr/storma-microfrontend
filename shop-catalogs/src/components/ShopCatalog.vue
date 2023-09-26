@@ -1,9 +1,14 @@
 <script setup>
-import { store, loadCatalogs } from '../store'
+import { store, loadCatalogs } from '../store';
+import { addToCart } from 'shopCart/store';
 
 const title = "Here is my Vue 3";
 
 loadCatalogs();
+
+const clicked = (catalog) => {
+  addToCart(catalog);
+}
 </script>
 
 <template>
@@ -15,7 +20,7 @@ loadCatalogs();
         <h3 class="text-lg font-semibold mt-2"> {{ catalog.product_name }} </h3>
         <p class="text-gray-500">{{ catalog.description }}</p>
         <span class="text-blue-500 font-semibold">$ {{ catalog.price }} </span>
-        <button class="w-full bg-blue-400 text-white rounded mt-2 p-2 hover:bg-blue-600">Add to Cart</button>
+        <button class="w-full bg-blue-400 text-white rounded mt-2 p-2 hover:bg-blue-600" @click="clicked(catalog)">Add to Cart</button>
       </div>
     </div>
   </div>

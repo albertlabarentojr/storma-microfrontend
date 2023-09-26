@@ -1,6 +1,6 @@
 import React from 'react'; // Must be imported for webpack to work
 
-export default function({ cart }) {
+export default function({ cart, removeToCart }) {
     return (
         <div className="space-y-2 mb-4">
             <div className="flex justify-between">
@@ -11,7 +11,7 @@ export default function({ cart }) {
                     <option>2</option>
                     <option>3</option>
                 </select>
-                <button className="bg-red-500 text-white rounded px-2 py-1 hover:bg-red-600">Remove</button>
+                <button className="bg-red-500 text-white rounded px-2 py-1 hover:bg-red-600" onClick={removeToCart}>Remove</button>
             </div>
         </div>
     );

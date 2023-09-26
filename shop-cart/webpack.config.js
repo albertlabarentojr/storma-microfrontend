@@ -48,7 +48,7 @@ module.exports = {
             },
             exposes: {
                 "./mount": "./src/index.js",
-                // "./store": "./src/store.js",
+                "./store": "./src/store.js",
             },
             shared: {
                 ...dependencies,
