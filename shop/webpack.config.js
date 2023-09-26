@@ -45,6 +45,7 @@ module.exports = {
             remotes: {
                 shopCatalog: "shopCatalog@http://localhost:8082/entry.js",
                 shopAds: "shopAds@http://localhost:8083/entry.js",
+                shopCart: "shopCart@http://localhost:8084/entry.js",
             },
             exposes: {},
         }),

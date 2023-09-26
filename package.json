@@ -5,7 +5,8 @@
     "packages": [
       "shop",
       "shop-catalogs",
-      "shop-ads"
+      "shop-ads",
+      "shop-cart"
     ]
   },
   "scripts": {

@@ -1,13 +1,12 @@
 <script setup>
-import { useStoryblok } from '@storyblok/vue';
-const story = await useStoryblok('header', { version: 'draft' });
+import ShopAds from './components/ShopAds.vue'
 </script>
 
 <template>
   <Suspense>
     <template #default>
       <div>
-        <StoryblokComponent v-if="story" :blok="story.content" />
+        <ShopAds/>
       </div>
     </template>
 

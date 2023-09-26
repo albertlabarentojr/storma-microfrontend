@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const { VueLoaderPlugin } = require("vue-loader");
+const { dependencies } = require("./package.json");
 
 module.exports = {
     mode: "development",
@@ -10,7 +10,7 @@ module.exports = {
     },
 
     devServer: {
-        port: 8082,
+        port: 8084,
         headers: {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
@@ -22,8 +22,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.vue$/,
-                loader: "vue-loader",
+                test: /\.(js|jsx)?$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: ["@babel/preset-env", "@babel/preset-react"],
+                        },
+                    },
+                ],
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -33,19 +41,29 @@ module.exports = {
     },
 
     plugins: [
-        new VueLoaderPlugin(),
         new ModuleFederationPlugin({
-            name: "shopCatalog",
+            name: "shopCart",
             filename: "entry.js",
             remotes: {
             },
             exposes: {
                 "./mount": "./src/index.js",
-                "./store": "./src/store.js",
+                // "./store": "./src/store.js",
+            },
+            shared: {
+                ...dependencies,
+                react: {
+                    singleton: true,
+                    requiredVersion: dependencies["react"],
+                },
+                "react-dom": {
+                    singleton: true,
+                    requiredVersion: dependencies["react-dom"],
+                },
             },
         }),
         new HtmlWebPackPlugin({
-            template: "./src/index.html",
+            template: "./public/index.html",
         }),
     ],
 };
