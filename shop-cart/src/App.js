@@ -4,6 +4,14 @@ import {subscribe, removeToCart} from './store';
 
 function App() {
     const [cart, setCart] = useState([]);
+    const [total, setTotal] = useState(0);
+    const updateCartItem = (cartItem, index) => {
+        const updatedCart = [...cart];
+
+        updatedCart[index] = cartItem;
+
+        setCart(updatedCart);
+    };
 
     useEffect(() => {
         const unsubscribe = subscribe((newState) => {
@@ -14,6 +22,12 @@ function App() {
             unsubscribe();
         };
     }, []);
+
+    useEffect(() => {
+        setTotal(
+            cart.reduce((accumulator, current) => accumulator + parseInt(current.total), 0)
+        );
+    }, [cart]);
 
     return (
         <>
@@ -27,13 +41,13 @@ function App() {
 
             {cart.length > 0 && (
                 <>
-                    { cart.map(item => (
-                        <Cart cart={item} key={item.sku} removeToCart={() => removeToCart(item)}></Cart>
+                    { cart.map((cartItem, index) => (
+                        <Cart cartItem={cartItem} key={index} index={index} removeToCart={removeToCart} updateCartItem={updateCartItem}></Cart>
                     ))}
 
                     <div className="flex justify-between mb-2">
                         <span>Total:</span>
-                        <span className="font-semibold text-blue-500">$64.98</span>
+                        <span className="font-semibold text-blue-500">${total}</span>
                     </div>
                     <button className="w-full bg-blue-400 text-white rounded mt-4 p-2 hover:bg-blue-600" >Checkout</button>
                 </>

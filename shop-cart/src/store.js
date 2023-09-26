@@ -7,7 +7,7 @@ export function getState() {
 }
 
 export function addToCart(catalog) {
-    sharedState.cart.push(catalog);
+    sharedState.cart.push({...catalog, quantity: 1, total: catalog.price});
     notifySubscribers();
 }
 

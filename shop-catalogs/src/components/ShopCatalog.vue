@@ -14,7 +14,7 @@ const clicked = (catalog) => {
 <template>
   <div v-if="store.isCatalogFetching">Fetching Catalogs...</div>
   <div v-else class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <div v-for="catalog in store.catalogs">
+    <div v-for="catalog in store.filteredCatalogs">
       <div class="bg-white rounded p-4 shadow">
         <img class="w-full h-30 object-cover rounded" :src="catalog.image" alt="Product">
         <h3 class="text-lg font-semibold mt-2"> {{ catalog.product_name }} </h3>

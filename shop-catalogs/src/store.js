@@ -3,6 +3,7 @@ import { reactive, watchEffect } from 'vue'
 export const store = reactive({
     isCatalogFetching: true,
     catalogs: [],
+    filteredCatalogs: [],
 });
 
 export const loadCatalogs = async () => {
@@ -10,12 +11,28 @@ export const loadCatalogs = async () => {
 
     // Add some delay for demo purposes.
     setTimeout(async () => {
-        const catalogs = await fetch("http://localhost:8082/tcg-catalogs.json");
+        const response = await fetch("http://localhost:8082/tcg-catalogs.json");
 
-        store.catalogs = await catalogs.json();
+        const catalogs = await response.json();
+        store.catalogs = catalogs;
+        store.filteredCatalogs = catalogs;
 
         store.isCatalogFetching = false;
     }, 1000);
+};
+
+const filterCatalogs = (searchText) => {
+    if (!searchText) {
+        return store.catalogs;
+    }
+
+    const searchRe = new RegExp(searchText, "i");
+
+    return [...store.catalogs].filter(({ product_name }) => product_name.match(searchRe));
+}
+
+export const searchCatalogs = (searchText) => {
+    store.filteredCatalogs = filterCatalogs(searchText);
 };
 
 export const setCatalogs = (catalogs = []) => {
