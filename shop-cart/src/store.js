@@ -14,7 +14,7 @@ export function addToCart(catalog) {
 export function removeToCart(catalog) {
     const index = sharedState.cart.findIndex(item => item.sku === catalog.sku);
 
-    sharedState.cart.splice( index );
+    sharedState.cart.splice( index, 1 );
 
     notifySubscribers();
 }

@@ -25,12 +25,12 @@ function App() {
                 <h2>Your cart is empty!</h2>
             ) }
 
-            { cart.map(item => (
-                <Cart cart={item} key={item.sku} removeToCart={() => removeToCart(item)}></Cart>
-            ))}
-
             {cart.length > 0 && (
                 <>
+                    { cart.map(item => (
+                        <Cart cart={item} key={item.sku} removeToCart={() => removeToCart(item)}></Cart>
+                    ))}
+
                     <div className="flex justify-between mb-2">
                         <span>Total:</span>
                         <span className="font-semibold text-blue-500">$64.98</span>
