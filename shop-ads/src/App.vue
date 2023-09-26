@@ -1,12 +1,13 @@
 <script setup>
-import ShopHeader from './components/ShopHeader.vue'
+import { useStoryblok } from '@storyblok/vue';
+const story = await useStoryblok('header', { version: 'draft' });
 </script>
 
 <template>
   <Suspense>
     <template #default>
       <div>
-        <ShopHeader />
+        <StoryblokComponent v-if="story" :blok="story.content" />
       </div>
     </template>
 
