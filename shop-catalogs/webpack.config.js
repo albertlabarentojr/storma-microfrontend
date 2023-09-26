@@ -46,7 +46,7 @@ module.exports = {
             },
         }),
         new HtmlWebPackPlugin({
-            template: "./src/index.html",
+            template: "./public/index.html",
         }),
     ],
 };

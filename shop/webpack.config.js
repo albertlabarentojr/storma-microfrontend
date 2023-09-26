@@ -51,7 +51,7 @@ module.exports = {
         }),
         new ExternalTemplateRemotesPlugin(),
         new HtmlWebPackPlugin({
-            template: "./src/index.html",
+            template: "./public/index.html",
         }),
     ],
 };
