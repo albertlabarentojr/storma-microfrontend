@@ -1,6 +1,6 @@
-import { createApp } from 'vue'
-import { StoryblokVue, apiPlugin } from '@storyblok/vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import { StoryblokVue, apiPlugin } from '@storyblok/vue';
+import App from './App.vue';
 import Grid from "./components/Grid.vue";
 import Page from "./components/Page.vue";
 import Teaser from "./components/Teaser.vue";
