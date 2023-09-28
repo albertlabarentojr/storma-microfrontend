@@ -5,9 +5,9 @@ import mountCart from 'shopCart/mount';
 import mountAds from 'shopAds/mount';
 
 
-mountCatalog('#shop-catalogs')
-mountCart('#shop-cart')
-mountAds('#shop-ads')
+mountCatalog('#shop-catalogs');
+mountCart('#shop-cart');
+mountAds('#shop-ads');
 
 subscribe((payload) => {
     console.log('Catalogs has been updated!', payload?.catalogs);
