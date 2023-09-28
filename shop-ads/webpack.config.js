@@ -39,8 +39,7 @@ module.exports = {
             remotes: {
             },
             exposes: {
-                "./mount": "./src/index.js",
-                "./store": "./src/store.js",
+                "./mount": "./src/mount.js",
             },
         }),
         new HtmlWebPackPlugin({
